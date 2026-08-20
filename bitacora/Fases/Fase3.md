@@ -1,5 +1,5 @@
-**Fase 3 – Viabilidad, plan piloto y propuesta de implementación** (noviembre – primera semana de diciembre)
-Objetivo: demostrar viabilidad y proponer un plan concreto de implementación.
+# Fase 3 – Viabilidad, plan piloto y propuesta de implementación (noviembre – primera semana de diciembre)
+## Objetivo: demostrar viabilidad y proponer un plan concreto de implementación.
 
 **Actividades tipo:**
 

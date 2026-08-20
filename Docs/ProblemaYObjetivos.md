@@ -1,4 +1,4 @@
-**PROBLEMA**
+# PROBLEMA*
 San José de Maipo presenta numerosas quebradas susceptibles a aluviones y remociones en masa tras eventos de lluvia, con aproximadamente 105 quebradas identificadas y cerca de 50 con población expuesta. Existe una red comunitaria de observadores y pluviómetros ciudadanos artesanales, pero los datos se registran de forma manual, dispersa y poco integrada, lo que limita su utilidad para la gestión preventiva del riesgo por parte de la comunidad, la municipalidad, SERNAGEOMIN y SENAPRED.
 
 Además, la comuna opera en condiciones de conectividad limitada, lo que dificulta el uso de soluciones convencionales de monitoreo automatizado. Como consecuencia, la información disponible no se aprovecha plenamente para:
@@ -13,12 +13,12 @@ Además, la comuna opera en condiciones de conectividad limitada, lo que dificul
 
 En términos de Design Thinking, el problema no es solo técnico (“falta automatización”), sino sociotécnico: cómo diseñar una solución de bajo costo que sea útil, usable y sostenible para los observadores y la comunidad, y que a la vez sea válida técnicamente e institucionalmente para los organismos de gestión del riesgo.
 
-**Objetivo general**
+## Objetivo general 
 
 - Diseñar y validar un modelo de red comunitaria de monitoreo de aluviones en San José de Maipo, basado en pluviómetros inteligentes de bajo costo y observación ciudadana, que automatice parte del registro de datos, opere en condiciones de conectividad limitada y apoye la gestión preventiva del riesgo
 
 
-**Objetivos específicos**
+## Objetivos específicos
 Cada objetivo específico puede asociarse a una o más fases de Design Thinking, aunque en la práctica habrá idas y vueltas entre ellas.
 
 1. Comprender las necesidades, prácticas, limitaciones y expectativas de los observadores comunitarios, habitantes de sectores expuestos, municipalidad, SERNAGEOMIN y SENAPRED respecto al monitoreo de lluvias y aluviones en San José de Maipo.

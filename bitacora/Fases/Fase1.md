@@ -1,5 +1,5 @@
-**Fase 1 – Investigación y diagnóstico**
-Objetivo: entender bien el contexto técnico y social del monitoreo de aluviones en San José de Maipo.
+# Fase 1 – Investigación y diagnóstico
+## Objetivo: entender bien el contexto técnico y social del monitoreo de aluviones en San José de Maipo.
 
 **Actividades tipo:**
 

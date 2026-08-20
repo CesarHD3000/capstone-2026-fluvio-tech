@@ -1,5 +1,5 @@
-Fase 0 – Arranque y estructuración
-Objetivo: dejar el proyecto bien definido y organizado.
+# Fase 0 – Arranque y estructuración
+## Objetivo: dejar el proyecto bien definido y organizado.
 
 **Actividades tipo:**
 

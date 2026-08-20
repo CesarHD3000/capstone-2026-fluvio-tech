@@ -1,5 +1,5 @@
-**Fase 2 – Diseño técnico y operativo** (octubre)
-Objetivo: diseñar la solución concreta (hardware, software, modelo operativo).
+# Fase 2 – Diseño técnico y operativo (octubre)
+## Objetivo: diseñar la solución concreta (hardware, software, modelo operativo).
 
 **Actividades tipo:**
 
