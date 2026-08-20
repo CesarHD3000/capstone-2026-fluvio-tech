@@ -1,4 +1,4 @@
-# PROBLEMA*
+# PROBLEMA
 San José de Maipo presenta numerosas quebradas susceptibles a aluviones y remociones en masa tras eventos de lluvia, con aproximadamente 105 quebradas identificadas y cerca de 50 con población expuesta. Existe una red comunitaria de observadores y pluviómetros ciudadanos artesanales, pero los datos se registran de forma manual, dispersa y poco integrada, lo que limita su utilidad para la gestión preventiva del riesgo por parte de la comunidad, la municipalidad, SERNAGEOMIN y SENAPRED.
 
 Además, la comuna opera en condiciones de conectividad limitada, lo que dificulta el uso de soluciones convencionales de monitoreo automatizado. Como consecuencia, la información disponible no se aprovecha plenamente para:
