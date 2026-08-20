@@ -1,0 +1,62 @@
+site_name: FluvioTech - Capstone 2026
+site_description: Red comunitaria de monitoreo de aluviones en San José de Maipo
+site_author: FluvioTech
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+
+plugins:
+  - search
+
+nav:
+  - Inicio: index.md
+  - Proyecto:
+      - Problema y Objetivos: proyecto/ProblemaYObjetivos.md
+      - Guía de Git: proyecto/InstruccionesGIT.md
+  - Bitácora:
+      - Guía de Bitácora: bitacora/GuíaBítacora.md
+      - Sesión 1 (S01): bitacora/S01.md
+  - Fases Design Thinking:
+      - Fase 0 - Arranque: bitacora/Fases/Fase0.md
+      - Fase 1: bitacora/Fases/Fase1.md
+      - Fase 2: bitacora/Fases/Fase2.md
+      - Fase 3: bitacora/Fases/Fase3.md
