@@ -1,28 +1,55 @@
 # FluvioTech - Proyecto Capstone 2026
 
-Bienvenido al portal oficial de documentación y bitácoras del proyecto **FluvioTech**.
-
-## 📌 Resumen del Proyecto
-
-**San José de Maipo** presenta numerosas quebradas susceptibles a aluviones y remociones en masa tras eventos de lluvia (aproximadamente 105 quebradas identificadas y cerca de 50 con población expuesta).
-
-Este proyecto tiene como objetivo diseñar y validar un **modelo de red comunitaria de monitoreo de aluviones** en San José de Maipo, basado en pluviómetros inteligentes de bajo costo y observación ciudadana, capaz de operar en condiciones de conectividad limitada y apoyar la gestión preventiva del riesgo junto a la comunidad, la municipalidad, SERNAGEOMIN y SENAPRED.
+<div style="font-size: 1.15rem; color: var(--md-default-fg-color--light); margin-bottom: 1.5rem;">
+Red Comunitaria de Monitoreo de Aluviones en San José de Maipo mediante pluviómetros inteligentes de bajo costo y observación ciudadana.
+</div>
 
 ---
 
-## 🗺️ Navegación de Documentos
+## 🚀 Accesos Rápidos
 
-Utiliza el menú superior o lateral para explorar las distintas secciones del proyecto:
+<div class="grid-cards">
+  <a href="proyecto/ProblemaYObjetivos/" class="card-item">
+    <h3>🎯 Desafío y Objetivos</h3>
+    <p>Conoce la definición sociotécnica del problema y los objetivos del proyecto.</p>
+  </a>
 
-* **[Problema y Objetivos](proyecto/ProblemaYObjetivos.md):** Definición sociotécnica del problema y lista de objetivos generales y específicos.
-* **[Bitácora de Sesiones](bitacora/GuíaBítacora.md):** Registro continuo del trabajo del equipo semana a semana.
-* **[Fases del Proyecto (Design Thinking)](bitacora/Fases/Fase0.md):** Estructura metodológica desde la Fase 0 (Arranque) hasta las fases avanzadas.
-* **[Guía de Git](proyecto/InstruccionesGIT.md):** Normas de trabajo y control de versiones para el equipo.
+  <a href="bitacora/GuíaBítacora/" class="card-item">
+    <h3>📝 Bitácoras de Trabajo</h3>
+    <p>Registro semanal de avances, reuniones, acuerdos y reflexiones del equipo.</p>
+  </a>
+
+  <a href="bitacora/Fases/Fase0/" class="card-item">
+    <h3>🔄 Design Thinking</h3>
+    <p>Fases del proyecto desde el arranque hasta la validación y escalamiento.</p>
+  </a>
+
+  <a href="proyecto/InstruccionesGIT/" class="card-item">
+    <h3>💻 Guía de Git</h3>
+    <p>Protocolos de desarrollo, ramas y flujos de trabajo del repositorio.</p>
+  </a>
+</div>
 
 ---
 
-## 👥 Equipo FluvioTech
+## 📌 Contexto del Proyecto
 
-* **Contexto:** Proyecto Capstone 2026
-* **Área de estudio:** San José de Maipo
-* **Repositorio GitHub:** [CesarHD3000/capstone-2026-fluvio-tech](https://github.com/CesarHD3000/capstone-2026-fluvio-tech)
+> [!NOTE]
+> **San José de Maipo** cuenta con aproximadamente **105 quebradas identificadas** y cerca de **50 con población expuesta** a remociones en masa.
+
+El proyecto busca diseñar un modelo de red comunitaria de monitoreo que:
+
+* 🌧️ **Automatice** el registro de precipitación con pluviómetros de bajo costo.
+* 📡 **Opere** eficientemente en condiciones de conectividad limitada.
+* 🤝 **Integre** la observación ciudadana con organismos técnicos (**SERNAGEOMIN**, **SENAPRED**, Municipalidad).
+
+---
+
+## 👥 Equipo e Instituciones
+
+| Rol | Entidad / Integrantes |
+|---|---|
+| **Proyecto** | Capstone 2026 - Universidad Mayor / Universidad de Chile |
+| **Equipo** | FluvioTech |
+| **Comunidad** | San José de Maipo (Observadores locales) |
+| **Repositorio** | [CesarHD3000/capstone-2026-fluvio-tech](https://github.com/CesarHD3000/capstone-2026-fluvio-tech) |
