@@ -3,7 +3,7 @@
     <span>CAPSTONE 2026</span> • <span>MONITOREO AMBIENTAL & IOT</span>
   </div>
   
-  <h1 class="hero-title">FLUVIOTECH</h1>
+  <h1 class="hero-title">PLUVIOTECH</h1>
   <div class="hero-subtitle">Red comunitaria de monitoreo de aluviones</div>
   
   <p class="hero-description">

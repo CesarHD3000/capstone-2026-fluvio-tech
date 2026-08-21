@@ -1,5 +1,5 @@
 /* ==========================================================================
-   FLUVIOTECH - SISTEMA DE DISEÑO VISUAL (CAPSTONE 2026)
+   PLUVIOTECH - SISTEMA DE DISEÑO VISUAL (CAPSTONE 2026)
    Estética: Plataforma IoT / Monitoreo Ambiental / Procesamiento de Datos
    ========================================================================== */
 
@@ -64,7 +64,7 @@
   letter-spacing: -0.01em;
 }
 
-/* Logo e Identidad FluvioTech en Navbar */
+/* Logo e Identidad PluvioTech en Navbar */
 .fluvio-brand-container {
   display: flex;
   align-items: center;
