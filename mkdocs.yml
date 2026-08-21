@@ -54,9 +54,6 @@ plugins:
 
 nav:
   - Inicio: index.md
-  - Proyecto:
-      - Problema y Objetivos: proyecto/ProblemaYObjetivos.md
-      - Guía de Git: proyecto/InstruccionesGIT.md
   - Bitácora:
       - Guía de Bitácora: bitacora/GuíaBítacora.md
       - Sesión 1 (S01): bitacora/S01.md

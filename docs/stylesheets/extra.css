@@ -22,7 +22,7 @@
   /* Color Turquesa para Interacción y Tecnología */
   --ft-turquoise:        #00acc1; /* Turquesa primario */
   --ft-turquoise-bright: #00e5ff; /* Turquesa brillante para detalles activos */
-  --ft-turquoise-bg:     rgba(0, 172, 193, 0.12); /* Fondo sutil turquesa */
+  --ft-turquoise-bg:     rgba(0, 172, 193, 0.14); /* Fondo sutil turquesa */
 
   /* Sobrescribir variables nativas de MkDocs Material */
   --md-default-bg-color:                var(--ft-bg-main);
@@ -49,7 +49,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   2. NAVBAR / BARRA SUPERIOR
+   2. NAVBAR / BARRA SUPERIOR Y PESTAÑAS DE NAVEGACIÓN
    -------------------------------------------------------------------------- */
 .md-header {
   background-color: rgba(14, 25, 39, 0.92) !important;
@@ -94,19 +94,27 @@
   margin-left: 0.3rem;
 }
 
-/* Pestañas de Navegación Centrales */
+/* Pestañas de Navegación Centrales - Palabras elevadas respecto a la línea inferior */
 .md-tabs {
   background-color: rgba(11, 18, 30, 0.95);
   border-bottom: 1px solid var(--ft-border);
+  padding-top: 0.2rem;
+  padding-bottom: 0.8rem; /* Margen de separación con la línea divisoria del body */
+}
+
+.md-tabs__list {
+  gap: 0.6rem;
 }
 
 .md-tabs__link {
   font-weight: 500;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--ft-text-muted) !important;
   opacity: 0.85;
   transition: all 0.2s ease;
-  padding: 0.7rem 1rem;
+  padding: 0.3rem 0.9rem 0.35rem 0.9rem !important; /* Desplazar texto hacia arriba */
+  margin-bottom: 0.2rem;
+  display: inline-block;
 }
 
 .md-tabs__link:hover {
@@ -114,11 +122,12 @@
   opacity: 1;
 }
 
+/* Enlace activo con indicador elevado */
 .md-tabs__link--active {
   color: var(--ft-turquoise-bright) !important;
   font-weight: 700;
   opacity: 1;
-  border-bottom: 2px solid var(--ft-turquoise);
+  border-bottom: 2px solid var(--ft-turquoise) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -159,10 +168,6 @@
   border-bottom: none !important;
 }
 
-.hero-title .highlight {
-  color: var(--ft-turquoise);
-}
-
 .hero-subtitle {
   font-size: 1.25rem;
   font-weight: 600;
@@ -195,142 +200,39 @@
 }
 
 /* --------------------------------------------------------------------------
-   4. TARJETAS DE INDICADORES (KPIs / CONTEXTO)
+   4. EQUIPO E INSTITUCIONES (TARJETAS APILADAS VERTICALMENTE)
    -------------------------------------------------------------------------- */
-.kpi-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
-  margin: 1.5rem 0 2rem 0;
-}
-
-.kpi-card {
-  background: var(--ft-bg-surface);
-  border: 1px solid var(--ft-border);
-  border-radius: 10px;
-  padding: 1.4rem 1.2rem;
-  text-align: left;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.kpi-card:hover {
-  border-color: var(--ft-turquoise);
-  transform: translateY(-2px);
-}
-
-.kpi-number {
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: var(--ft-turquoise-bright);
-  line-height: 1;
-  margin-bottom: 0.4rem;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.kpi-label {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ft-text-primary);
-  margin-bottom: 0.25rem;
-}
-
-.kpi-subtext {
-  font-size: 0.78rem;
-  color: var(--ft-text-muted);
-  line-height: 1.4;
-}
-
-/* --------------------------------------------------------------------------
-   5. TARJETAS DE ACCESO RÁPIDO & CONTENIDO
-   -------------------------------------------------------------------------- */
-.grid-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.2rem;
-  margin: 1.5rem 0 2.5rem 0;
-}
-
-.card-item {
-  background: var(--ft-bg-surface);
-  border: 1px solid var(--ft-border);
-  border-radius: 10px;
-  padding: 1.4rem;
+.team-stack {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-decoration: none !important;
-  transition: all 0.2s ease;
-}
-
-.card-item:hover {
-  border-color: var(--ft-turquoise);
-  background: var(--ft-bg-surface-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.card-item h3 {
-  font-size: 1.05rem !important;
-  font-weight: 700 !important;
-  color: var(--ft-text-primary) !important;
-  margin: 0 0 0.5rem 0 !important;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: none !important;
-}
-
-.card-item h3 .card-icon {
-  color: var(--ft-turquoise);
-}
-
-.card-item p {
-  font-size: 0.88rem;
-  color: var(--ft-text-secondary);
-  line-height: 1.5;
-  margin: 0 0 1rem 0;
-}
-
-.card-item .card-link-action {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--ft-turquoise);
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-/* --------------------------------------------------------------------------
-   6. EQUIPO E INSTITUCIONES (TARJETAS ESTRUCTURADAS)
-   -------------------------------------------------------------------------- */
-.team-inst-section {
-  margin-top: 2rem;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  gap: 1.1rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .entity-card {
   background: var(--ft-bg-surface);
   border: 1px solid var(--ft-border);
   border-radius: 10px;
-  padding: 1.3rem;
+  padding: 1.3rem 1.5rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.entity-card:hover {
+  border-color: var(--ft-turquoise);
+  transform: translateX(4px);
 }
 
 .entity-header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  gap: 0.85rem;
+  margin-bottom: 0.6rem;
 }
 
 .entity-icon {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   background: var(--ft-turquoise-bg);
   border: 1px solid rgba(0, 172, 193, 0.3);
@@ -338,11 +240,12 @@
   align-items: center;
   justify-content: center;
   color: var(--ft-turquoise-bright);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .entity-title-box h4 {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
   font-weight: 700 !important;
   color: var(--ft-text-primary) !important;
   margin: 0 !important;
@@ -358,13 +261,57 @@
 }
 
 .entity-body {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--ft-text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* --------------------------------------------------------------------------
-   7. TABLA DE CONTENIDOS LATERAL (SIDE TOC)
+   5. NAVEGACIÓN LATERAL IZQUIERDA (.md-sidebar--primary) - SUBSECCIONES Y MARCADOR
+   -------------------------------------------------------------------------- */
+.md-sidebar--primary .md-nav__title {
+  color: var(--ft-text-primary);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.md-sidebar--primary .md-nav__link {
+  color: var(--ft-text-secondary) !important; /* Alta legibilidad para enlaces inactivos */
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  border-radius: 4px;
+  padding: 0.35rem 0.6rem;
+}
+
+.md-sidebar--primary .md-nav__link:hover {
+  color: var(--ft-turquoise-bright) !important;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Subsección / Ítem activo en la barra lateral izquierda */
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link {
+  color: var(--ft-turquoise-bright) !important; /* Mismo turquesa brillante que la Tabla de Contenidos */
+  font-weight: 700 !important;
+  background-color: var(--ft-turquoise-bg) !important;
+  border-left: 3px solid var(--ft-turquoise) !important;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Marcador '>' previo en la subsección activa */
+.md-sidebar--primary .md-nav__link--active::before,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link::before {
+  content: "> ";
+  color: var(--ft-turquoise-bright);
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-right: 0.4rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. TABLA DE CONTENIDOS LATERAL DERECHA (SIDE TOC / .md-sidebar--secondary)
    -------------------------------------------------------------------------- */
 .md-sidebar--secondary .md-nav__title {
   font-size: 0.72rem;
@@ -386,12 +333,19 @@
 }
 
 .md-sidebar--secondary .md-nav__link--active {
+  color: var(--ft-turquoise-bright) !important;
+  font-weight: 700;
+}
+
+.md-sidebar--secondary .md-nav__link--active::before {
+  content: "> ";
   color: var(--ft-turquoise-bright);
-  font-weight: 600;
+  font-weight: 800;
+  margin-right: 0.35rem;
 }
 
 /* --------------------------------------------------------------------------
-   8. MEJORAS GENERALES DE TIPOGRAFÍA Y ACCESIBILIDAD
+   7. MEJORAS GENERALES DE TIPOGRAFÍA Y ACCESIBILIDAD
    -------------------------------------------------------------------------- */
 .md-typeset h1 {
   font-weight: 800;
