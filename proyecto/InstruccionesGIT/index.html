@@ -1,0 +1,1824 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Red comunitaria de monitoreo de aluviones en San José de Maipo">
+      
+      
+        <meta name="author" content="PluvioTech">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../material/water">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Guía básica de Git y GitHub para la bitácora de Capstone - PluvioTech</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-basica-de-git-y-github-para-la-bitacora-de-capstone" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="PluvioTech" class="md-header__button md-logo" aria-label="PluvioTech" data-md-component="logo">
+      
+  <img src="../../material/weather-pouring" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PluvioTech
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guía básica de Git y GitHub para la bitácora de Capstone
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CesarHD3000/capstone-2026-fluvio-tech" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    capstone-2026-fluvio-tech
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bitacora/Gu%C3%ADaB%C3%ADtacora/" class="md-tabs__link">
+          
+  
+  
+  Bitácora
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bitacora/Fases/Fase0/" class="md-tabs__link">
+          
+  
+  
+  Fases del Proyecto
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PluvioTech" class="md-nav__button md-logo" aria-label="PluvioTech" data-md-component="logo">
+      
+  <img src="../../material/weather-pouring" alt="logo">
+
+    </a>
+    PluvioTech
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CesarHD3000/capstone-2026-fluvio-tech" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    capstone-2026-fluvio-tech
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bitácora
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bitácora
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/Gu%C3%ADaB%C3%ADtacora/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Bitácora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/S01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sesión 1 (S01)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/S02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sesión 2 (S02)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fases del Proyecto
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fases del Proyecto
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/Fases/Fase0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 0 - Arranque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/Fases/Fase1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/Fases/Fase2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bitacora/Fases/Fase3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-para-que-usaremos-github-en-este-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. ¿Para qué usaremos GitHub en este curso?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-conceptos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Conceptos básicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Conceptos básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-y-github-no-son-lo-mismo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git y GitHub no son lo mismo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#repositorio-publico-y-privado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Repositorio público y privado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-antes-de-comenzar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Antes de comenzar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ruta-inicial-trabajar-desde-el-navegador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Ruta inicial: trabajar desde el navegador
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Ruta inicial: trabajar desde el navegador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-crear-una-cuenta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 1. Crear una cuenta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-crear-el-repositorio-del-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 2. Crear el repositorio del equipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-agregar-al-resto-del-equipo-como-colaboradores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 3. Agregar al resto del equipo como colaboradores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-editar-el-archivo-readmemd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 4. Editar el archivo README.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-5-crear-carpetas-y-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 5. Crear carpetas y archivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-6-subir-fotografias-diagramas-y-otros-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 6. Subir fotografías, diagramas y otros archivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-7-insertar-una-imagen-en-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 7. Insertar una imagen en Markdown
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-8-compartir-el-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paso 8. Compartir el repositorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-markdown-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Markdown básico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estructura-minima-recomendada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estructura mínima recomendada
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-plantilla-lista-para-el-readme-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Plantilla lista para el README del proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-plantilla-de-la-primera-entrada-identidad-y-desafio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Plantilla de la primera entrada: identidad y desafío
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-plantilla-general-para-las-siguientes-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Plantilla general para las siguientes sesiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-como-escribir-buenos-mensajes-de-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Cómo escribir buenos mensajes de commit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ruta-opcional-trabajar-localmente-con-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Ruta opcional: trabajar localmente con Git
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Ruta opcional: trabajar localmente con Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-la-identidad-una-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configurar la identidad una vez
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clonar-el-repositorio-una-vez" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clonar el repositorio una vez
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flujo-basico-cada-vez-que-trabajen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo básico cada vez que trabajen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-una-rama-para-un-cambio-separado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crear una rama para un cambio separado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-acuerdos-minimos-para-trabajar-en-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Acuerdos mínimos para trabajar en equipo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-archivos-grandes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Archivos grandes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-lista-de-verificacion-antes-de-compartir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Lista de verificación antes de compartir
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-documentacion-oficial-de-apoyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Documentación oficial de apoyo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="guia-basica-de-git-y-github-para-la-bitacora-de-capstone">Guía básica de Git y GitHub para la bitácora de Capstone</h1>
+<blockquote>
+<p>En Capstone no basta con que una solución funcione. La bitácora debe mostrar cómo el equipo investigó, tomó decisiones, probó, se equivocó, aprendió e iteró.</p>
+</blockquote>
+<p>Esta guía explica cómo crear y mantener una bitácora de proyecto en GitHub, incluso si nunca antes has utilizado Git, GitHub o Markdown.</p>
+<h2 id="1-para-que-usaremos-github-en-este-curso">1. ¿Para qué usaremos GitHub en este curso?</h2>
+<p>Cada equipo tendrá un repositorio que funcionará como una <strong>bitácora viva</strong> del proyecto. Allí deberá registrar:</p>
+<ul>
+<li>integrantes, roles y acuerdos del equipo;</li>
+<li>definición y evolución del desafío;</li>
+<li>objetivos, requerimientos y restricciones;</li>
+<li>actividades realizadas en cada sesión;</li>
+<li>fotografías, diagramas, datos, código y prototipos;</li>
+<li>decisiones y su justificación;</li>
+<li>errores, pruebas, resultados e iteraciones;</li>
+<li>entregas y estado actual del proyecto.</li>
+</ul>
+<p>La regla central es:</p>
+<blockquote>
+<p>El proyecto no termina cuando funciona; termina cuando otra persona puede comprender qué hicieron, por qué lo hicieron y qué evidencia respalda sus decisiones.</p>
+</blockquote>
+<h2 id="2-conceptos-basicos">2. Conceptos básicos</h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Explicación simple</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Git</strong></td>
+<td>Programa de control de versiones que registra los cambios de los archivos a lo largo del tiempo. Puede funcionar localmente, sin GitHub.</td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td>Plataforma en línea que utiliza Git para guardar, organizar, compartir y documentar proyectos.</td>
+</tr>
+<tr>
+<td><strong>Repositorio</strong></td>
+<td>Carpeta principal del proyecto. Contiene archivos, carpetas y el historial de cambios.</td>
+</tr>
+<tr>
+<td><strong>Repositorio local</strong></td>
+<td>Copia del proyecto guardada en un computador.</td>
+</tr>
+<tr>
+<td><strong>Repositorio remoto</strong></td>
+<td>Copia alojada en un servidor, por ejemplo, GitHub.</td>
+</tr>
+<tr>
+<td><strong>README.md</strong></td>
+<td>Portada del repositorio. Explica qué es el proyecto y orienta a quien lo visita.</td>
+</tr>
+<tr>
+<td><strong>Markdown</strong></td>
+<td>Forma sencilla de dar formato a textos mediante símbolos como <code>#</code>, <code>-</code>, <code>**</code> y <code>[]()</code>.</td>
+</tr>
+<tr>
+<td><strong>Commit</strong></td>
+<td>Registro de una versión o conjunto de cambios, acompañado por un mensaje.</td>
+</tr>
+<tr>
+<td><strong>Clone</strong></td>
+<td>Crear en el computador una copia completa de un repositorio remoto.</td>
+</tr>
+<tr>
+<td><strong>Pull</strong></td>
+<td>Descargar e integrar los cambios más recientes del repositorio remoto.</td>
+</tr>
+<tr>
+<td><strong>Push</strong></td>
+<td>Enviar al repositorio remoto los commits realizados localmente.</td>
+</tr>
+<tr>
+<td><strong>Branch o rama</strong></td>
+<td>Línea de trabajo separada que permite desarrollar cambios sin modificar inmediatamente la versión principal.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-y-github-no-son-lo-mismo">Git y GitHub no son lo mismo</h3>
+<ul>
+<li><strong>Git</strong> controla versiones.</li>
+<li><strong>GitHub</strong> aloja repositorios remotos y facilita compartir y colaborar.</li>
+<li>En este curso comenzaremos usando principalmente GitHub desde el navegador.</li>
+<li>Más adelante podrán trabajar localmente con Git, GitHub Desktop o un editor como Visual Studio Code.</li>
+</ul>
+<h3 id="repositorio-publico-y-privado">Repositorio público y privado</h3>
+<table>
+<thead>
+<tr>
+<th>Visibilidad</th>
+<th>Quién puede verlo</th>
+<th>Cuándo usarlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Público</strong></td>
+<td>Cualquier persona en internet.</td>
+<td>Cuando el contenido puede compartirse y no contiene información sensible o reservada.</td>
+</tr>
+<tr>
+<td><strong>Privado</strong></td>
+<td>Solo las personas invitadas.</td>
+<td>Cuando existen datos sensibles, acuerdos de confidencialidad o información de una contraparte que no ha autorizado su publicación.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Importante:</strong> un repositorio público puede verse, pero no se transforma automáticamente en un proyecto <em>open source</em>. La posibilidad de copiar, modificar o reutilizar su contenido depende de la licencia. No agreguen una licencia ni publiquen información de la contraparte sin conversarlo con el equipo docente.</p>
+<h2 id="3-antes-de-comenzar">3. Antes de comenzar</h2>
+<p>Necesitarán:</p>
+<ol>
+<li>Una cuenta personal en <a href="https://github.com/">GitHub</a>.</li>
+<li>Acceso al correo asociado a la cuenta.</li>
+<li>Un nombre de usuario reconocible, por ejemplo: <code>nombre-apellido</code>.</li>
+<li>El nombre del equipo y un nombre preliminar para el proyecto.</li>
+</ol>
+<p>Nunca suban al repositorio:</p>
+<ul>
+<li>contraseñas;</li>
+<li>tokens o claves de API;</li>
+<li>datos personales sensibles;</li>
+<li>bases de datos con información identificable;</li>
+<li>documentos privados de terceros;</li>
+<li>información reservada por la contraparte;</li>
+<li>archivos cuya publicación no esté autorizada.</li>
+</ul>
+<h2 id="4-ruta-inicial-trabajar-desde-el-navegador">4. Ruta inicial: trabajar desde el navegador</h2>
+<p>Esta es la ruta recomendada para comenzar. No requiere instalar programas ni utilizar la terminal.</p>
+<h3 id="paso-1-crear-una-cuenta">Paso 1. Crear una cuenta</h3>
+<ol>
+<li>Entrar a <a href="https://github.com/">github.com</a>.</li>
+<li>Seleccionar <strong>Sign up</strong>.</li>
+<li>Crear la cuenta con un correo que revisen regularmente.</li>
+<li>Elegir un nombre de usuario reconocible.</li>
+<li>Verificar el correo.</li>
+<li>Guardar la contraseña en un lugar seguro.</li>
+</ol>
+<h3 id="paso-2-crear-el-repositorio-del-equipo">Paso 2. Crear el repositorio del equipo</h3>
+<p>Una sola persona del equipo debe crear el repositorio.</p>
+<ol>
+<li>Iniciar sesión en GitHub.</li>
+<li>Seleccionar el símbolo <strong>+</strong> de la esquina superior derecha.</li>
+<li>Elegir <strong>New repository</strong>.</li>
+<li>Completar la configuración:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Configuración sugerida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Owner</td>
+<td>Cuenta de la persona que crea el repositorio.</td>
+</tr>
+<tr>
+<td>Repository name</td>
+<td><code>capstone-2026-nombre-equipo</code></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Descripción breve del desafío.</td>
+</tr>
+<tr>
+<td>Visibility</td>
+<td>Público si está autorizado; privado si existe información reservada.</td>
+</tr>
+<tr>
+<td>Add a README file</td>
+<td>Activar esta opción.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Seleccionar <strong>Create repository</strong>.</li>
+</ol>
+<p>Usen nombres breves, en minúsculas, sin tildes y sin espacios. Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>capstone-2026-equipo-orbita
+</code></pre></div>
+<h3 id="paso-3-agregar-al-resto-del-equipo-como-colaboradores">Paso 3. Agregar al resto del equipo como colaboradores</h3>
+<p>Este paso es obligatorio para que cada integrante pueda editar y quede identificado en el historial.</p>
+<ol>
+<li>Entrar al repositorio.</li>
+<li>Seleccionar <strong>Settings</strong>.</li>
+<li>En la sección <strong>Access</strong>, seleccionar <strong>Collaborators</strong>.</li>
+<li>Seleccionar <strong>Add people</strong>.</li>
+<li>Buscar el nombre de usuario o correo de cada integrante.</li>
+<li>Enviar la invitación.</li>
+<li>Cada persona debe aceptar la invitación recibida por correo o en GitHub.</li>
+<li>Si el repositorio es privado, agregar también a las cuentas docentes que se indiquen.</li>
+</ol>
+<p>No compartan una misma cuenta entre varias personas. Cada integrante debe trabajar desde su propia cuenta.</p>
+<h3 id="paso-4-editar-el-archivo-readmemd">Paso 4. Editar el archivo README.md</h3>
+<ol>
+<li>Entrar al repositorio.</li>
+<li>Seleccionar el archivo <code>README.md</code>.</li>
+<li>Seleccionar el ícono de lápiz <strong>Edit this file</strong>.</li>
+<li>Escribir o pegar el contenido.</li>
+<li>Usar la pestaña <strong>Preview</strong> para revisar cómo se verá.</li>
+<li>Seleccionar <strong>Commit changes</strong>.</li>
+<li>Escribir un mensaje breve y descriptivo, por ejemplo:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>agrega identidad y acuerdos iniciales del equipo
+</code></pre></div>
+<ol>
+<li>Confirmar el cambio.</li>
+</ol>
+<p>Si el repositorio no tiene un README:</p>
+<ol>
+<li>Seleccionar <strong>Add file</strong>.</li>
+<li>Elegir <strong>Create new file</strong>.</li>
+<li>Escribir exactamente <code>README.md</code> como nombre del archivo.</li>
+<li>Agregar el contenido y confirmar los cambios.</li>
+</ol>
+<h3 id="paso-5-crear-carpetas-y-archivos">Paso 5. Crear carpetas y archivos</h3>
+<p>GitHub no guarda carpetas vacías. Para crear una carpeta desde el navegador, deben crear al mismo tiempo un archivo dentro de ella.</p>
+<p>Ejemplo para crear la primera entrada de la bitácora:</p>
+<ol>
+<li>Seleccionar <strong>Add file</strong>.</li>
+<li>Elegir <strong>Create new file</strong>.</li>
+<li>En el nombre del archivo escribir:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>bitacora/S01.md
+</code></pre></div>
+<ol>
+<li>Pegar la plantilla de sesión incluida más abajo.</li>
+<li>Seleccionar <strong>Commit changes</strong>.</li>
+</ol>
+<p>GitHub creará automáticamente la carpeta <code>bitacora</code> y el archivo <code>S01.md</code>.</p>
+<h3 id="paso-6-subir-fotografias-diagramas-y-otros-archivos">Paso 6. Subir fotografías, diagramas y otros archivos</h3>
+<ol>
+<li>Entrar a la carpeta donde quedará el archivo.</li>
+<li>Seleccionar <strong>Add file</strong> y luego <strong>Upload files</strong>.</li>
+<li>Arrastrar o seleccionar los archivos.</li>
+<li>Escribir un mensaje de commit claro.</li>
+<li>Seleccionar <strong>Commit changes</strong>.</li>
+</ol>
+<p>Para crear primero una carpeta de imágenes pueden crear el archivo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>imagenes/S01/README.md
+</code></pre></div>
+<p>Luego entren a <code>imagenes/S01/</code> y suban allí las fotografías.</p>
+<p>Usen nombres claros, sin espacios ni tildes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>foto-equipo.jpg
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>primer-prototipo.jpg
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>prueba-distancia-01.jpg
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>diagrama-sistema.png
+</code></pre></div>
+<p>Eviten nombres como:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>IMG_4829.jpg
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>foto final final ahora si.jpg
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>Documento (7).pdf
+</code></pre></div>
+<p>Las fotografías deben funcionar como <strong>evidencia técnica</strong>, no solo como decoración. Incluyan imágenes de conexiones, montajes, pruebas, resultados y también de los errores que ayudaron a tomar decisiones.</p>
+<h3 id="paso-7-insertar-una-imagen-en-markdown">Paso 7. Insertar una imagen en Markdown</h3>
+<p>Desde el <code>README.md</code> principal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>![<span class="nt">Primer prototipo</span>](<span class="na">imagenes/S01/primer-prototipo.jpg</span>)
+</code></pre></div>
+<p>Desde un archivo ubicado dentro de <code>bitacora/</code>, la ruta debe retroceder un nivel:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>![<span class="nt">Primer prototipo</span>](<span class="na">../imagenes/S01/primer-prototipo.jpg</span>)
+</code></pre></div>
+<p>El texto entre corchetes debe describir brevemente la imagen. Esto mejora la comprensión y la accesibilidad.</p>
+<h3 id="paso-8-compartir-el-repositorio">Paso 8. Compartir el repositorio</h3>
+<ol>
+<li>Entrar a la página principal del repositorio.</li>
+<li>Copiar la URL del navegador. Tendrá una forma similar a:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>https://github.com/usuario/capstone-2026-nombre-equipo
+</code></pre></div>
+<ol>
+<li>Entregar el enlace por el canal indicado por el equipo docente.</li>
+<li>Comprobar que el <code>README.md</code> se vea al entrar.</li>
+<li>Si el repositorio es público, abrir el enlace en una ventana privada para verificar el acceso.</li>
+<li>Si es privado, verificar que docentes e integrantes hayan aceptado la invitación.</li>
+</ol>
+<p>No entreguen solamente un archivo <code>.zip</code> al final del semestre. El enlace debe permitir revisar la evolución del proyecto y su historial.</p>
+<h2 id="5-markdown-basico">5. Markdown básico</h2>
+<p>Markdown permite escribir contenido ordenado sin diseñar una página web. Pueden copiar y modificar este ejemplo:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="gh"># Título principal</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="gu">## Subtítulo</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>Texto normal y <span class="gs">**texto destacado**</span>.
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="gu">### Lista</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">-</span><span class="w"> </span>Primer elemento
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">-</span><span class="w"> </span>Segundo elemento
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="k">-</span><span class="w"> </span>Tercer elemento
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="gu">### Lista numerada</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="k">1.</span> Primer paso
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="k">2.</span> Segundo paso
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="k">3.</span> Tercer paso
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="gu">### Lista de tareas</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="k">- [x]</span> Actividad terminada
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="k">- [ ]</span> Actividad pendiente
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="gu">### Enlace</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>[<span class="nt">Documentación de GitHub</span>](<span class="na">https://docs.github.com/es</span>)
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="gu">### Imagen</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>![<span class="nt">Descripción de la imagen</span>](<span class="na">imagenes/S01/foto.jpg</span>)
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="gu">### Cita</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a><span class="k">&gt; </span><span class="ge">Una idea o frase relevante.</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a><span class="gu">### Código en una línea</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>El archivo principal se llama <span class="sb">`README.md`</span>.
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>
+<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a><span class="gu">### Bloque de código</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>
+<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a><span class="sb">```python</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Hola, Capstone"</span><span class="p">)</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a><span class="sb">```</span>
+<a id="__codelineno-9-45" name="__codelineno-9-45" href="#__codelineno-9-45"></a>
+<a id="__codelineno-9-46" name="__codelineno-9-46" href="#__codelineno-9-46"></a><span class="gu">### Tabla</span>
+<a id="__codelineno-9-47" name="__codelineno-9-47" href="#__codelineno-9-47"></a>
+<a id="__codelineno-9-48" name="__codelineno-9-48" href="#__codelineno-9-48"></a>| Criterio | Resultado |
+<a id="__codelineno-9-49" name="__codelineno-9-49" href="#__codelineno-9-49"></a>|---|---|
+<a id="__codelineno-9-50" name="__codelineno-9-50" href="#__codelineno-9-50"></a>| Distancia | 6,4 m |
+<a id="__codelineno-9-51" name="__codelineno-9-51" href="#__codelineno-9-51"></a>| Tiempo | 3,2 s |
+</code></pre></div>
+<h2 id="6-estructura-minima-recomendada">6. Estructura mínima recomendada</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>capstone-2026-nombre-equipo/
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>│
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>├── README.md
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>├── bitacora/
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>│   ├── S01.md
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>│   ├── S02.md
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>│   └── S03.md
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>│
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>├── imagenes/
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>│   ├── S01/
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>│   ├── S02/
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>│   └── S03/
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>│
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>├── entregas/
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>├── prototipo/
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>├── datos/
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>├── referencias/
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>└── LICENSE              # solo si corresponde y está autorizado
+</code></pre></div>
+<p>Esta estructura puede modificarse según las necesidades del proyecto. Lo importante es que otra persona pueda orientarse sin preguntar dónde está cada cosa.</p>
+<h2 id="7-plantilla-lista-para-el-readme-del-proyecto">7. Plantilla lista para el README del proyecto</h2>
+<p>Copien este bloque y reemplacen todo lo que aparezca entre corchetes.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="gh"># [Nombre del proyecto]</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="gu">## Capstone Intermedio 2026</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="gs">**Equipo:**</span> [Nombre del equipo]  
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="gs">**Desafío:**</span> [Nombre breve del desafío]  
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="gs">**Contraparte:**</span> [Organización o actor externo, si corresponde]  
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="gs">**Estado actual:**</span> En desarrollo
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>![<span class="nt">Foto del equipo</span>](<span class="na">imagenes/S01/foto-equipo.jpg</span>)
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="gu">## Descripción</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>[Expliquen en un párrafo qué problema están abordando, para quién y en qué contexto.]
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="gu">## Equipo</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>| Integrante | Carrera o especialidad | Rol inicial | Usuario de GitHub |
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>|---|---|---|---|
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>| [Nombre] | [Carrera] | [Rol] | [@usuario] |
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>| [Nombre] | [Carrera] | [Rol] | [@usuario] |
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>| [Nombre] | [Carrera] | [Rol] | [@usuario] |
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="gu">## Valores del equipo</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a><span class="k">-</span><span class="w"> </span>[Valor 1]
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a><span class="k">-</span><span class="w"> </span>[Valor 2]
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a><span class="k">-</span><span class="w"> </span>[Valor 3]
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a><span class="gu">## Normas de funcionamiento</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a><span class="k">1.</span> [Norma 1]
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a><span class="k">2.</span> [Norma 2]
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a><span class="k">3.</span> [Norma 3]
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a><span class="k">4.</span> [Cómo resolveremos desacuerdos]
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a><span class="k">5.</span> [Cómo registraremos las decisiones]
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a><span class="gu">## Desafío inicial</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>[Describan el desafío con sus propias palabras. Indiquen qué saben, qué todavía no saben y qué supuestos deben comprobar.]
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a><span class="gu">## Objetivo SMART del equipo</span>
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>[Escriban un objetivo específico, medible, alcanzable, relevante y acotado en el tiempo.]
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a><span class="gu">## Compromisos individuales</span>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>| Integrante | Compromiso SMART |
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>|---|---|
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>| [Nombre] | [Compromiso] |
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>| [Nombre] | [Compromiso] |
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a>| [Nombre] | [Compromiso] |
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a>
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a><span class="gu">## Usuarios y contexto</span>
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a>[¿Quiénes viven el problema? ¿Dónde ocurre? ¿Qué evidencia tienen hasta ahora?]
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a>
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a><span class="gu">## Plan inicial</span>
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a>
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a>| Actividad | Responsable(s) | Fecha | Estado |
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a>|---|---|---|---|
+<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a>| [Actividad] | [Nombre] | [dd-mm-aaaa] | Pendiente |
+<a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a>| [Actividad] | [Nombre] | [dd-mm-aaaa] | Pendiente |
+<a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a>
+<a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a><span class="gu">## Índice de la bitácora</span>
+<a id="__codelineno-11-66" name="__codelineno-11-66" href="#__codelineno-11-66"></a>
+<a id="__codelineno-11-67" name="__codelineno-11-67" href="#__codelineno-11-67"></a><span class="k">-</span><span class="w"> </span>[<span class="nt">S01 - Identidad del equipo y desafío</span>](<span class="na">bitacora/S01.md</span>)
+<a id="__codelineno-11-68" name="__codelineno-11-68" href="#__codelineno-11-68"></a><span class="k">-</span><span class="w"> </span>[<span class="nt">S02 - Levantamiento inicial</span>](<span class="na">bitacora/S02.md</span>)
+<a id="__codelineno-11-69" name="__codelineno-11-69" href="#__codelineno-11-69"></a><span class="k">-</span><span class="w"> </span>[<span class="nt">S03 - Empatizar</span>](<span class="na">bitacora/S03.md</span>)
+<a id="__codelineno-11-70" name="__codelineno-11-70" href="#__codelineno-11-70"></a>
+<a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a><span class="gu">## Evidencias principales</span>
+<a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a>
+<a id="__codelineno-11-73" name="__codelineno-11-73" href="#__codelineno-11-73"></a><span class="k">-</span><span class="w"> </span>[Enlace a una prueba, fotografía, dato o documento]
+<a id="__codelineno-11-74" name="__codelineno-11-74" href="#__codelineno-11-74"></a><span class="k">-</span><span class="w"> </span>[Enlace a una prueba, fotografía, dato o documento]
+<a id="__codelineno-11-75" name="__codelineno-11-75" href="#__codelineno-11-75"></a>
+<a id="__codelineno-11-76" name="__codelineno-11-76" href="#__codelineno-11-76"></a><span class="gu">## Decisiones relevantes</span>
+<a id="__codelineno-11-77" name="__codelineno-11-77" href="#__codelineno-11-77"></a>
+<a id="__codelineno-11-78" name="__codelineno-11-78" href="#__codelineno-11-78"></a>| Fecha | Decisión | Evidencia o criterio utilizado |
+<a id="__codelineno-11-79" name="__codelineno-11-79" href="#__codelineno-11-79"></a>|---|---|---|
+<a id="__codelineno-11-80" name="__codelineno-11-80" href="#__codelineno-11-80"></a>| [dd-mm-aaaa] | [Decisión] | [Evidencia] |
+<a id="__codelineno-11-81" name="__codelineno-11-81" href="#__codelineno-11-81"></a>
+<a id="__codelineno-11-82" name="__codelineno-11-82" href="#__codelineno-11-82"></a><span class="gu">## Próximo hito</span>
+<a id="__codelineno-11-83" name="__codelineno-11-83" href="#__codelineno-11-83"></a>
+<a id="__codelineno-11-84" name="__codelineno-11-84" href="#__codelineno-11-84"></a>[Indiquen qué debe lograr el equipo a continuación y cómo comprobarán que lo consiguió.]
+<a id="__codelineno-11-85" name="__codelineno-11-85" href="#__codelineno-11-85"></a>
+<a id="__codelineno-11-86" name="__codelineno-11-86" href="#__codelineno-11-86"></a><span class="gu">## Uso y licencia</span>
+<a id="__codelineno-11-87" name="__codelineno-11-87" href="#__codelineno-11-87"></a>
+<a id="__codelineno-11-88" name="__codelineno-11-88" href="#__codelineno-11-88"></a>[Por definir con el equipo docente y la contraparte. No reutilizar ni publicar información reservada sin autorización.]
+</code></pre></div>
+<h2 id="8-plantilla-de-la-primera-entrada-identidad-y-desafio">8. Plantilla de la primera entrada: identidad y desafío</h2>
+<p>Crear el archivo <code>bitacora/S01.md</code> y pegar lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gh"># S01 - Identidad del equipo y desafío</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="gs">**Fecha:**</span> [dd-mm-aaaa]  
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="gs">**Participantes:**</span> [Nombres]  
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="gs">**Lugar o modalidad:**</span> [Lugar / presencial / en línea]
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="gu">## Objetivo de la sesión</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>Construir la identidad del equipo, acordar su forma de trabajo y realizar una primera interpretación del desafío Capstone.
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="gu">## Foto del equipo</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>![<span class="nt">Foto del equipo</span>](<span class="na">../imagenes/S01/foto-equipo.jpg</span>)
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a><span class="gu">## Nombre del equipo</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a><span class="gs">**Nombre:**</span> [Nombre del equipo]
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a><span class="gs">**¿Por qué lo elegimos?**</span>  
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>[Explicación breve.]
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a><span class="gu">## Integrantes y roles iniciales</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>| Integrante | Carrera o especialidad | Rol inicial | Aporte esperado |
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>|---|---|---|---|
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>| [Nombre] | [Carrera] | [Rol] | [Aporte] |
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>| [Nombre] | [Carrera] | [Rol] | [Aporte] |
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a><span class="gu">## Valores del equipo</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a><span class="k">-</span><span class="w"> </span>[Valor 1]
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a><span class="k">-</span><span class="w"> </span>[Valor 2]
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a><span class="k">-</span><span class="w"> </span>[Valor 3]
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a><span class="gu">## Normas y contrato de funcionamiento</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a><span class="k">1.</span> [Canal y frecuencia de comunicación]
+<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a><span class="k">2.</span> [Puntualidad y asistencia]
+<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a><span class="k">3.</span> [Distribución y seguimiento de tareas]
+<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a><span class="k">4.</span> [Forma de tomar decisiones]
+<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a><span class="k">5.</span> [Forma de resolver conflictos]
+<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a><span class="k">6.</span> [Responsabilidad de actualizar GitHub]
+<a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a>
+<a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a><span class="gu">## Primera definición del desafío</span>
+<a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a>
+<a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a>[¿Cómo entiende actualmente el equipo el desafío?]
+<a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a>
+<a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a><span class="gu">### Lo que sabemos</span>
+<a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a>
+<a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a><span class="k">-</span><span class="w"> </span>[Evidencia o antecedente 1]
+<a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a><span class="k">-</span><span class="w"> </span>[Evidencia o antecedente 2]
+<a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a>
+<a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a><span class="gu">### Lo que todavía no sabemos</span>
+<a id="__codelineno-12-54" name="__codelineno-12-54" href="#__codelineno-12-54"></a>
+<a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a><span class="k">-</span><span class="w"> </span>[Pregunta 1]
+<a id="__codelineno-12-56" name="__codelineno-12-56" href="#__codelineno-12-56"></a><span class="k">-</span><span class="w"> </span>[Pregunta 2]
+<a id="__codelineno-12-57" name="__codelineno-12-57" href="#__codelineno-12-57"></a>
+<a id="__codelineno-12-58" name="__codelineno-12-58" href="#__codelineno-12-58"></a><span class="gu">### Supuestos que debemos comprobar</span>
+<a id="__codelineno-12-59" name="__codelineno-12-59" href="#__codelineno-12-59"></a>
+<a id="__codelineno-12-60" name="__codelineno-12-60" href="#__codelineno-12-60"></a><span class="k">-</span><span class="w"> </span>[Supuesto 1]
+<a id="__codelineno-12-61" name="__codelineno-12-61" href="#__codelineno-12-61"></a><span class="k">-</span><span class="w"> </span>[Supuesto 2]
+<a id="__codelineno-12-62" name="__codelineno-12-62" href="#__codelineno-12-62"></a>
+<a id="__codelineno-12-63" name="__codelineno-12-63" href="#__codelineno-12-63"></a><span class="gu">## Objetivo SMART del equipo</span>
+<a id="__codelineno-12-64" name="__codelineno-12-64" href="#__codelineno-12-64"></a>
+<a id="__codelineno-12-65" name="__codelineno-12-65" href="#__codelineno-12-65"></a>[Objetivo específico, medible, alcanzable, relevante y acotado en el tiempo.]
+<a id="__codelineno-12-66" name="__codelineno-12-66" href="#__codelineno-12-66"></a>
+<a id="__codelineno-12-67" name="__codelineno-12-67" href="#__codelineno-12-67"></a><span class="gu">## Compromisos individuales SMART</span>
+<a id="__codelineno-12-68" name="__codelineno-12-68" href="#__codelineno-12-68"></a>
+<a id="__codelineno-12-69" name="__codelineno-12-69" href="#__codelineno-12-69"></a>| Integrante | Compromiso | Evidencia de cumplimiento | Fecha |
+<a id="__codelineno-12-70" name="__codelineno-12-70" href="#__codelineno-12-70"></a>|---|---|---|---|
+<a id="__codelineno-12-71" name="__codelineno-12-71" href="#__codelineno-12-71"></a>| [Nombre] | [Compromiso] | [Evidencia] | [Fecha] |
+<a id="__codelineno-12-72" name="__codelineno-12-72" href="#__codelineno-12-72"></a>| [Nombre] | [Compromiso] | [Evidencia] | [Fecha] |
+<a id="__codelineno-12-73" name="__codelineno-12-73" href="#__codelineno-12-73"></a>
+<a id="__codelineno-12-74" name="__codelineno-12-74" href="#__codelineno-12-74"></a><span class="gu">## Acuerdos y tareas</span>
+<a id="__codelineno-12-75" name="__codelineno-12-75" href="#__codelineno-12-75"></a>
+<a id="__codelineno-12-76" name="__codelineno-12-76" href="#__codelineno-12-76"></a>| Tarea | Responsable(s) | Fecha límite | Estado |
+<a id="__codelineno-12-77" name="__codelineno-12-77" href="#__codelineno-12-77"></a>|---|---|---|---|
+<a id="__codelineno-12-78" name="__codelineno-12-78" href="#__codelineno-12-78"></a>| [Tarea] | [Nombre] | [Fecha] | Pendiente |
+<a id="__codelineno-12-79" name="__codelineno-12-79" href="#__codelineno-12-79"></a>| [Tarea] | [Nombre] | [Fecha] | Pendiente |
+<a id="__codelineno-12-80" name="__codelineno-12-80" href="#__codelineno-12-80"></a>
+<a id="__codelineno-12-81" name="__codelineno-12-81" href="#__codelineno-12-81"></a><span class="gu">## Reflexión breve</span>
+<a id="__codelineno-12-82" name="__codelineno-12-82" href="#__codelineno-12-82"></a>
+<a id="__codelineno-12-83" name="__codelineno-12-83" href="#__codelineno-12-83"></a><span class="gs">**¿Qué fue fácil?**</span>  
+<a id="__codelineno-12-84" name="__codelineno-12-84" href="#__codelineno-12-84"></a>[Respuesta.]
+<a id="__codelineno-12-85" name="__codelineno-12-85" href="#__codelineno-12-85"></a>
+<a id="__codelineno-12-86" name="__codelineno-12-86" href="#__codelineno-12-86"></a><span class="gs">**¿Qué fue difícil o generó desacuerdo?**</span>  
+<a id="__codelineno-12-87" name="__codelineno-12-87" href="#__codelineno-12-87"></a>[Respuesta.]
+<a id="__codelineno-12-88" name="__codelineno-12-88" href="#__codelineno-12-88"></a>
+<a id="__codelineno-12-89" name="__codelineno-12-89" href="#__codelineno-12-89"></a><span class="gs">**¿Qué necesitamos resolver en la próxima sesión?**</span>  
+<a id="__codelineno-12-90" name="__codelineno-12-90" href="#__codelineno-12-90"></a>[Respuesta.]
+</code></pre></div>
+<h2 id="9-plantilla-general-para-las-siguientes-sesiones">9. Plantilla general para las siguientes sesiones</h2>
+<p>Crear un archivo por sesión: <code>S02.md</code>, <code>S03.md</code>, <code>S04.md</code>, etc.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gh"># SXX - [Título de la sesión]</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="gs">**Fecha:**</span> [dd-mm-aaaa]  
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="gs">**Participantes:**</span> [Nombres]  
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="gs">**Responsable del registro:**</span> [Nombre]
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="gu">## Objetivo</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>[¿Qué queríamos comprender, decidir, construir o probar?]
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="gu">## Actividades realizadas</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="k">1.</span> [Actividad 1]
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="k">2.</span> [Actividad 2]
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="k">3.</span> [Actividad 3]
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="gu">## Evidencias</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>![<span class="nt">Descripción de la evidencia</span>](<span class="na">../imagenes/SXX/nombre-archivo.jpg</span>)
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="k">-</span><span class="w"> </span>[Enlace a datos, código, diagrama, prototipo o documento]
+<a id="__codelineno-13-22" name="__codelineno-13-22" href="#__codelineno-13-22"></a>
+<a id="__codelineno-13-23" name="__codelineno-13-23" href="#__codelineno-13-23"></a><span class="gu">## Resultados</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24" href="#__codelineno-13-24"></a>
+<a id="__codelineno-13-25" name="__codelineno-13-25" href="#__codelineno-13-25"></a>[¿Qué ocurrió? Incluyan datos, observaciones o resultados concretos.]
+<a id="__codelineno-13-26" name="__codelineno-13-26" href="#__codelineno-13-26"></a>
+<a id="__codelineno-13-27" name="__codelineno-13-27" href="#__codelineno-13-27"></a><span class="gu">## Decisiones y justificación</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28" href="#__codelineno-13-28"></a>
+<a id="__codelineno-13-29" name="__codelineno-13-29" href="#__codelineno-13-29"></a>| Decisión | Evidencia o criterio | Consecuencia para el proyecto |
+<a id="__codelineno-13-30" name="__codelineno-13-30" href="#__codelineno-13-30"></a>|---|---|---|
+<a id="__codelineno-13-31" name="__codelineno-13-31" href="#__codelineno-13-31"></a>| [Decisión] | [Evidencia] | [Consecuencia] |
+<a id="__codelineno-13-32" name="__codelineno-13-32" href="#__codelineno-13-32"></a>
+<a id="__codelineno-13-33" name="__codelineno-13-33" href="#__codelineno-13-33"></a><span class="gu">## Errores, dificultades o riesgos</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34" href="#__codelineno-13-34"></a>
+<a id="__codelineno-13-35" name="__codelineno-13-35" href="#__codelineno-13-35"></a><span class="k">-</span><span class="w"> </span>[Qué no funcionó]
+<a id="__codelineno-13-36" name="__codelineno-13-36" href="#__codelineno-13-36"></a><span class="k">-</span><span class="w"> </span>[Por qué creemos que ocurrió]
+<a id="__codelineno-13-37" name="__codelineno-13-37" href="#__codelineno-13-37"></a><span class="k">-</span><span class="w"> </span>[Qué haremos para comprobarlo o corregirlo]
+<a id="__codelineno-13-38" name="__codelineno-13-38" href="#__codelineno-13-38"></a>
+<a id="__codelineno-13-39" name="__codelineno-13-39" href="#__codelineno-13-39"></a><span class="gu">## Aprendizajes</span>
+<a id="__codelineno-13-40" name="__codelineno-13-40" href="#__codelineno-13-40"></a>
+<a id="__codelineno-13-41" name="__codelineno-13-41" href="#__codelineno-13-41"></a>[¿Qué entiende ahora el equipo que antes no entendía?]
+<a id="__codelineno-13-42" name="__codelineno-13-42" href="#__codelineno-13-42"></a>
+<a id="__codelineno-13-43" name="__codelineno-13-43" href="#__codelineno-13-43"></a><span class="gu">## Tareas y responsables</span>
+<a id="__codelineno-13-44" name="__codelineno-13-44" href="#__codelineno-13-44"></a>
+<a id="__codelineno-13-45" name="__codelineno-13-45" href="#__codelineno-13-45"></a>| Tarea | Responsable(s) | Fecha límite | Estado |
+<a id="__codelineno-13-46" name="__codelineno-13-46" href="#__codelineno-13-46"></a>|---|---|---|---|
+<a id="__codelineno-13-47" name="__codelineno-13-47" href="#__codelineno-13-47"></a>| [Tarea] | [Nombre] | [Fecha] | Pendiente |
+<a id="__codelineno-13-48" name="__codelineno-13-48" href="#__codelineno-13-48"></a>
+<a id="__codelineno-13-49" name="__codelineno-13-49" href="#__codelineno-13-49"></a><span class="gu">## Próximo paso</span>
+<a id="__codelineno-13-50" name="__codelineno-13-50" href="#__codelineno-13-50"></a>
+<a id="__codelineno-13-51" name="__codelineno-13-51" href="#__codelineno-13-51"></a>[¿Cuál es la siguiente acción y qué evidencia permitirá saber si resultó?]
+<a id="__codelineno-13-52" name="__codelineno-13-52" href="#__codelineno-13-52"></a>
+<a id="__codelineno-13-53" name="__codelineno-13-53" href="#__codelineno-13-53"></a><span class="gu">## Fuentes consultadas</span>
+<a id="__codelineno-13-54" name="__codelineno-13-54" href="#__codelineno-13-54"></a>
+<a id="__codelineno-13-55" name="__codelineno-13-55" href="#__codelineno-13-55"></a><span class="k">-</span><span class="w"> </span>[Autor u organización, título y enlace]
+</code></pre></div>
+<h2 id="10-como-escribir-buenos-mensajes-de-commit">10. Cómo escribir buenos mensajes de commit</h2>
+<p>Un commit debe indicar qué cambió. Eviten mensajes vagos.</p>
+<table>
+<thead>
+<tr>
+<th>Evitar</th>
+<th>Preferir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>avance</code></td>
+<td><code>documenta entrevista inicial con contraparte</code></td>
+</tr>
+<tr>
+<td><code>cosas</code></td>
+<td><code>sube fotografías de la prueba de distancia</code></td>
+</tr>
+<tr>
+<td><code>final final</code></td>
+<td><code>corrige objetivo SMART después de retroalimentación</code></td>
+</tr>
+<tr>
+<td><code>actualización</code></td>
+<td><code>agrega matriz de requerimientos y restricciones</code></td>
+</tr>
+</tbody>
+</table>
+<p>Hagan un commit por cambio significativo. Esto permite reconstruir el proceso y volver a versiones anteriores si es necesario.</p>
+<h2 id="11-ruta-opcional-trabajar-localmente-con-git">11. Ruta opcional: trabajar localmente con Git</h2>
+<p>Esta sección es para quienes quieran comenzar a usar Git desde su computador. Antes deben instalar Git o utilizar GitHub Desktop.</p>
+<h3 id="configurar-la-identidad-una-vez">Configurar la identidad una vez</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Nombre Apellido"</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"correo@ejemplo.cl"</span>
+</code></pre></div>
+<p>Usen un correo asociado y verificado en GitHub. Nunca escriban la contraseña dentro de un archivo o comando del proyecto.</p>
+<h3 id="clonar-el-repositorio-una-vez">Clonar el repositorio una vez</h3>
+<ol>
+<li>En GitHub, entrar al repositorio.</li>
+<li>Seleccionar <strong>Code</strong>.</li>
+<li>Copiar la dirección HTTPS.</li>
+<li>Abrir la terminal y ejecutar:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/USUARIO/NOMBRE-REPOSITORIO.git
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nb">cd</span><span class="w"> </span>NOMBRE-REPOSITORIO
+</code></pre></div>
+<p>Reemplacen <code>USUARIO</code> y <code>NOMBRE-REPOSITORIO</code> por los datos reales.</p>
+<h3 id="flujo-basico-cada-vez-que-trabajen">Flujo básico cada vez que trabajen</h3>
+<p>Antes de editar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>Después de editar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>git<span class="w"> </span>status
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>git<span class="w"> </span>add<span class="w"> </span>README.md<span class="w"> </span>bitacora/S02.md<span class="w"> </span>imagenes/S02/
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"documenta sesion 02 y sube evidencias"</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>¿Qué hace cada comando?</p>
+<ul>
+<li><code>git pull origin main</code>: descarga los cambios más recientes.</li>
+<li><code>git status</code>: muestra qué archivos cambiaron.</li>
+<li><code>git add</code>: selecciona los archivos que entrarán al próximo commit.</li>
+<li><code>git commit -m "mensaje"</code>: crea una versión con un mensaje.</li>
+<li><code>git push origin main</code>: envía los commits a GitHub.</li>
+</ul>
+<p>Antes de usar <code>git add .</code>, revisen siempre <code>git status</code>. Así evitan subir accidentalmente archivos privados, temporales o muy pesados.</p>
+<h3 id="crear-una-rama-para-un-cambio-separado">Crear una rama para un cambio separado</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>nombre-del-cambio
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>git<span class="w"> </span>add<span class="w"> </span>bitacora/S03.md
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"agrega registro de la sesion 03"</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>nombre-del-cambio
+</code></pre></div>
+<p>Luego pueden abrir una <strong>Pull Request</strong> en GitHub para revisar el cambio antes de incorporarlo a <code>main</code>.</p>
+<h2 id="12-acuerdos-minimos-para-trabajar-en-equipo">12. Acuerdos mínimos para trabajar en equipo</h2>
+<ol>
+<li>Cada persona usa su propia cuenta.</li>
+<li>Antes de comenzar, revisar si otra persona está editando el mismo archivo.</li>
+<li>Si trabajan localmente, ejecutar <code>git pull</code> antes de editar.</li>
+<li>Evitar que dos personas modifiquen simultáneamente la misma parte del <code>README.md</code>.</li>
+<li>Hacer cambios pequeños y commits claros.</li>
+<li>Subir los avances durante el proceso, no todos juntos al final.</li>
+<li>Registrar errores y decisiones, no solo resultados exitosos.</li>
+<li>No borrar el trabajo de otra persona sin conversarlo.</li>
+<li>No usar <code>git push --force</code> en el repositorio del curso.</li>
+<li>Mantener actualizado el índice del <code>README.md</code>.</li>
+</ol>
+<h2 id="13-archivos-grandes">13. Archivos grandes</h2>
+<p>El navegador de GitHub limita las cargas individuales y GitHub bloquea archivos demasiado grandes en repositorios Git normales. Para el curso:</p>
+<ul>
+<li>compriman fotografías antes de subirlas;</li>
+<li>eviten subir videos completos;</li>
+<li>no suban copias repetidas del mismo archivo;</li>
+<li>consulten antes de subir bases de datos, archivos CAD o simulaciones pesadas;</li>
+<li>si un archivo necesita Git LFS, coordínenlo primero con el equipo docente.</li>
+</ul>
+<h2 id="14-lista-de-verificacion-antes-de-compartir">14. Lista de verificación antes de compartir</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El enlace abre el repositorio correcto.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El <code>README.md</code> explica el proyecto y se ve al entrar.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Todos los integrantes aparecen con su rol y usuario.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> El desafío y el objetivo SMART están escritos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La primera sesión está enlazada desde el índice.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Las imágenes y enlaces funcionan.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Los commits tienen mensajes comprensibles.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> No existen contraseñas, datos sensibles ni archivos reservados.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Si el repositorio es privado, docentes e integrantes tienen acceso.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> La bitácora permite comprender qué hizo el equipo y qué debe hacer después.</li>
+</ul>
+<h2 id="15-documentacion-oficial-de-apoyo">15. Documentación oficial de apoyo</h2>
+<ul>
+<li><a href="https://docs.github.com/es/get-started/using-git/about-git">Acerca de Git</a></li>
+<li><a href="https://docs.github.com/es/repositories/creating-and-managing-repositories/quickstart-for-repositories">Inicio rápido para repositorios</a></li>
+<li><a href="https://docs.github.com/es/repositories/creating-and-managing-repositories/about-repositories">Acerca de los repositorios</a></li>
+<li><a href="https://docs.github.com/es/repositories/working-with-files/managing-files/editing-files">Editar archivos en GitHub</a></li>
+<li><a href="https://docs.github.com/es/repositories/working-with-files/managing-files/adding-a-file-to-a-repository">Agregar archivos a un repositorio</a></li>
+<li><a href="https://docs.github.com/es/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes">Acerca de los archivos README</a></li>
+<li><a href="https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Sintaxis básica de Markdown</a></li>
+<li><a href="https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository">Clonar un repositorio</a></li>
+<li><a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository">Invitar colaboradores a un repositorio personal</a></li>
+</ul>
+<hr />
+<p><strong>Curso:</strong> Proyecto Capstone Intermedio<br />
+<strong>Semestre:</strong> Primavera 2026<br />
+<strong>Uso:</strong> guía inicial para crear, mantener y compartir la bitácora de equipo.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
